@@ -1,4 +1,4 @@
-# Slack Notify Step [![Docker Repository on Quay.io](https://quay.io/repository/wantedly/pretty-slack-notify/status "Docker Repository on Quay.io")](https://quay.io/repository/wantedly/pretty-slack-notify)
+# Slack Notify Step [![Docker Repository on Quay.io](https://quay.io/repository/denshoch/pretty-slack-notify/status "Docker Repository on Quay.io")](https://quay.io/repository/denshoch/pretty-slack-notify)
 Posts wercker build/deploy status to a [Slack Channel](https://slack.com/).
 
 ![screenshot](https://raw.githubusercontent.com/wantedly/step-pretty-slack-notify/master/screenshot.png)
@@ -22,7 +22,7 @@ build:
     after-steps:
         - install-packages:
             packages: ruby
-        - wantedly/pretty-slack-notify:
+        - denshoch/pretty-slack-notify:
             webhook_url: $SLACK_WEBHOOK_URL
 ```
 
@@ -33,7 +33,7 @@ deploy:
     after-steps:
         - install-packages:
             packages: ruby
-        - wantedly/pretty-slack-notify:
+        - denshoch/pretty-slack-notify:
             webhook_url: $SLACK_WEBHOOK_URL
 ```
 
@@ -44,7 +44,7 @@ build:
     after-steps:
         - install-packages:
             packages: ruby
-        - wantedly/pretty-slack-notify:
+        - denshoch/pretty-slack-notify:
             webhook_url: $SLACK_WEBHOOK_URL
             channel: dev
             username: cibot
@@ -57,7 +57,7 @@ build:
     after-steps:
         - install-packages:
             packages: ruby
-        - wantedly/pretty-slack-notify:
+        - denshoch/pretty-slack-notify:
             webhook_url: $SLACK_WEBHOOK_URL
             branches: ^master$
 ```
@@ -69,7 +69,7 @@ build:
     after-steps:
         - install-packages:
             packages: ruby
-        - wantedly/pretty-slack-notify:
+        - denshoch/pretty-slack-notify:
             webhook_url: $SLACK_WEBHOOK_URL
             notify_on: "failed"
 ```
